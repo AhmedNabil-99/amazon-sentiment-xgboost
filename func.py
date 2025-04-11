@@ -20,10 +20,10 @@ def nltk_clean(text):
     clean_tokens = [lemmatizer.lemmatize(w) for w in tokens if w not in stop_words]
     return " ".join(clean_tokens)
 
-def get_average_vector(text, embedding):
-    words = text.split()
-    vectors = [embedding[word] for word in words if word in embedding]
-    return np.mean(vectors, axis=0) if vectors else np.zeros(100)
+# def get_average_vector(text, embedding):
+#     words = text.split()
+#     vectors = [embedding[word] for word in words if word in embedding]
+#     return np.mean(vectors, axis=0) if vectors else np.zeros(100)
 
 def predict_review_sentiment(text, embedding_model, model, label_encoder):
     clean = nltk_clean(text)
