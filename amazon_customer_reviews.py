@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import gensim.downloader as api
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import classification_report
@@ -9,7 +8,7 @@ import matplotlib.pyplot as plt
 from sentence_transformers import SentenceTransformer
 
 
-from func import nltk_clean, rate_to_binary_sentiment, get_average_vector, predict_review_sentiment
+from func import nltk_clean, rate_to_binary_sentiment, predict_review_sentiment
 
 
 
